@@ -1,25 +1,94 @@
 :root {
+  --green: hsl(75, 94%, 57%);
+  --white: hsl(0, 0%, 100%);
+  --white-grey: hsl(0, 0%, 80%);
+  --grey-700: hsl(0, 0%, 20%);
+  --grey-800: hsl(0, 0%, 12%);
+  --grey-900: hsl(0, 0%, 8%);
+  --paragraph-font-size: 0.875rem;
+  --title-font-size: 1.5rem;
 }
 
-.body {
+@font-face {
+  font-family: 'Inter-Bold';
+  src: url(../assets/fonts/static/Inter-Bold.ttf);
+}
+
+@font-face {
+  font-family: 'Inter-Regular';
+  src: url(../assets/fonts/static/Inter-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'Inter-SemiBold';
+  src: url(../assets/fonts/static/Inter-SemiBold.ttf);
+}
+
+body {
+  background-color: var(--grey-900);
   margin: 0;
 }
 
-.social-link-container {
+img {
+  border-radius: 50%;
+}
+
+.article {
+  align-items: center;
   display: flex;
   justify-content: center;
-  align-items: center;
   height: 100vh;
 }
 
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 767px) {
+.social-links-container {
+  align-items: center;
+  background-color: var(--grey-800);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+  text-align: center;
 }
 
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
+.title {
+  color: var(--white);
+  font-family: 'Inter-Bold', 'Sans-serif';
+  font-size: var(--title-font-size);
+  margin: 1rem 0 0.5rem;
 }
 
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
+.location {
+  color: var(--green);
+  font-family: 'Inter-Semibold', 'Sans-serif';
+  font-size: var(--paragraph-font-size);
+  margin: 0;
+}
+
+.description {
+  color: var(--white-grey);
+  font-family: 'Inter-Regular', 'Sans-serif';
+  font-size: var(--paragraph-font-size);
+  margin: 1.5rem;
+}
+
+.user-social-links {
+  width: 100%;
+}
+
+.link-container {
+  background-color: var(--grey-700);
+  border-radius: 10px;
+  color: var(--white);
+  cursor: pointer;
+  font-family: 'Inter-Semibold', 'Sans-serif';
+  font-size: var(--paragraph-font-size);
+  margin-bottom: 1rem;
+  padding: 1rem;
+  text-align: center;
+}
+
+.link-container:hover,
+.active-link {
+  color: var(--green);
 }
