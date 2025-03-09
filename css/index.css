@@ -1,4 +1,6 @@
 :root {
+  --blue: hsl(220, 94%, 57%);
+  --dark-blue: hsl(220, 89%, 36%);
   --green: hsl(75, 94%, 57%);
   --white: hsl(0, 0%, 100%);
   --white-grey: hsl(0, 0%, 80%);
@@ -90,5 +92,19 @@ img {
 
 .link-container:hover,
 .active-link {
-  color: var(--green);
+  color: var(--white);
+  animation-name: focusBigger;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes focusBigger {
+  0% {
+    padding: 1rem;
+  }
+  100% {
+    padding: 1.2rem;
+    background-color: var(--blue);
+    border: 2px solid var(--dark-blue);
+  }
 }
