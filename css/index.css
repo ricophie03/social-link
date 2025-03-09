@@ -88,23 +88,12 @@ img {
   margin-bottom: 1rem;
   padding: 1rem;
   text-align: center;
+  transition: padding 1s, background-color 1s, border 1s, color 1s;
 }
 
 .link-container:hover,
 .active-link {
-  color: var(--white);
-  animation-name: focusBigger;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
-}
-
-@keyframes focusBigger {
-  0% {
-    padding: 1rem;
-  }
-  100% {
-    padding: 1.2rem;
-    background-color: var(--blue);
-    border: 2px solid var(--dark-blue);
-  }
+  padding: 1.2rem;
+  background-color: var(--blue);
+  border: 2px solid var(--dark-blue);
 }
